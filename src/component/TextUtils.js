@@ -67,6 +67,7 @@ function TextUtils(props) {
     <p>{text.split(" ").filter(elm => elm!=='').length}words and {text.trim().length} character</p>
     <p>{0.008*text.split(" ").filter(elm => elm!=='').length} minutes to read</p>
     <h3>Preview</h3>
+    
     <p>{text}</p>
     </div>
     </div>
