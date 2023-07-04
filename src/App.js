@@ -4,6 +4,14 @@ import Navbar from './component/navbar';
 import TextUtils from './component/TextUtils';
 import Alert from './component/Alert';
 import { useState } from 'react';
+import About from './component/About';
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	Link
+} from 'react-router-dom';
+
 
 function App() {
   const [alert, setalert] = useState(null);
@@ -21,7 +29,10 @@ function App() {
     <Navbar/>
     <div>
     <Alert alert={alert}/>
-    <TextUtils showAlert={showAlert} header="Enter your Text"/>
+      <Routes>
+        <Route path="/" element={<TextUtils showAlert={showAlert} header="Enter your Text"/>}/>
+          <Route path="/about" element={<About />} />
+      </Routes>
     </div>
     </>
   );
